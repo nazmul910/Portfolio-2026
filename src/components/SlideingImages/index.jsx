@@ -16,7 +16,7 @@ const slider1 = [
     },
     {
         
-        src: "background.jpg",
+        src: "background1.png",
         color: "#e3e3e3"
     },
     {
@@ -36,7 +36,7 @@ const slider2 = [
         color: "#d6d7dc"
     }, 
     {       
-        src: "background.jpg",
+        src: "background1.png",
         color: "#e3e3e3"
     },  
     {    

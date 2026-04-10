@@ -8,6 +8,7 @@ import Description from "../components/Description/index"
 import Projects from "../components/Projects/index"
 import SlideingImages from "../components/SlideingImages/index"
 import Contact from "../components/Contact/index"
+import Skill from "../components/Skill/index"
 
 export default function Home() {
 
@@ -36,6 +37,7 @@ export default function Home() {
         </AnimatePresence>
         <Landing/>
         <Description/>
+        <Skill/>
         <Projects/>
         <SlideingImages/>
         <Contact/>
