@@ -3,7 +3,7 @@
 import styles from "./style.module.scss";
 import { useState,useEffect,useRef } from "react";
 import {motion} from "framer-motion" ;
-import Project from "../../components/project"
+import Project from "./components/project/index"
 import gsap from "gsap";
 import Image from "next/image";
 import Rounded from "../../common/RoundedButton/index"
@@ -16,17 +16,17 @@ const projects = [
     },
     {
         title:"C2 New0",
-        src: "locomotive.png",
+        src: "c2.jpg",
         color: "#8c8c8c"
     },
     {
         title:"C2 New1",
-        src: "locomotive.png",
+        src: "background.jpg",
         color: "#EFE8D3"
     },
     {
         title:"C2 New3",
-        src: "locomotive.png",
+        src: "maven.jpg",
         color: "#706D63"
     },
 ]
@@ -93,11 +93,11 @@ export default function Home() {
             </Rounded>
             <>
                 <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>
-                    <div style={{top:index * -100 + "%"}} className={styles.modelSlider}>
+                    <div style={{top:index * -100 + "%"}} className={styles.modalSlider}>
                         {
                             projects.map((project,index) => {
                                 const {src,color} = project
-                                return <div className={styles.modal} style={{backgroundClip:color}} key={`modal_${index}`}>
+                                return <div className={styles.modal} style={{backgroundColor:color}} key={`modal_${index}`}>
                                     <Image 
                                          src={`/images/${src}`}
                                          width={300}
