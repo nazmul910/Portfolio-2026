@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "../components/Preloader/index"
+import Landing from "../components/Landing/index"
 
 export default function Home() {
 
@@ -29,7 +30,7 @@ export default function Home() {
         <AnimatePresence mode="wait">
           {isLoading && <Preloader/>}
         </AnimatePresence>
-
+        <Landing/>
 
 
       </main>
