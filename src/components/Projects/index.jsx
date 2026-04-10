@@ -54,14 +54,15 @@ export default function Home() {
     let yMoveCursorLabel = useRef(null);
 
     useEffect(() =>{
-        xMoveContainer.current = gsap.quickTo(modalContainer.current,"left",{duration: 0.8, ease:"power3"})
-        yMoveContainer.current = gsap.quickTo(modalContainer.current,"top",{duration: 0.8, ease:"power3"})
 
-        xMoveContainer.current = gsap.quickTo(cursor.current,"left",{duration: 0.5, ease:"power3"})
-        yMoveContainer.current = gsap.quickTo(cursor.current,"top",{duration: 0.5, ease:"power3"})
+        xMoveContainer.current = gsap.quickTo(modalContainer.current, "left", {duration: 0.8, ease: "power3"})
+        yMoveContainer.current = gsap.quickTo(modalContainer.current, "top", {duration: 0.8, ease: "power3"})
 
-        xMoveContainer.current = gsap.quickTo(cursorlabel.current,"left",{duration: 0.45, ease:"power3"})
-        yMoveContainer.current = gsap.quickTo(cursorlabel.current,"top",{duration: 0.45, ease:"power3"})
+        xMoveCursor.current = gsap.quickTo(cursor.current, "left", {duration: 0.5, ease: "power3"})
+        yMoveCursor.current = gsap.quickTo(cursor.current, "top", {duration: 0.5, ease: "power3"})
+
+        xMoveCursorLabel.current = gsap.quickTo(cursorlabel.current, "left", {duration: 0.45, ease: "power3"})
+        yMoveCursorLabel.current = gsap.quickTo(cursorlabel.current, "top", {duration: 0.45, ease: "power3"})
     },[])
 
     const moveItems = (x,y) =>{
