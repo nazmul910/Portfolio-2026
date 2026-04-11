@@ -10,32 +10,52 @@ import Rounded from "../../common/RoundedButton/index"
 
 const projects = [
     {
-        title: "C2 Montreaal",
-        src: "locomotive.png",
+        title: "E-DoctorSheba website",
+        des:"Ract js,Node js,Tailwind",
+        src: "imgp2.png",
         color: "#000000",
-        github: "https://github.com/",
-        live: "https://example.com/"
+        github: "https://github.com/nazmul910/Frontend_E_DoctorSheba",
+        live: "https://frontend-e-doctor-sheba.vercel.app/"
     },
     {
-        title: "C2 New0",
-        src: "c2.jpg",
+        title: "Justice website",
+        des:"Next js,Node js,Tailwind,Typescript",
+        src: "imgp1.png",
         color: "#8c8c8c",
-        github: "https://github.com/",
-        live: "https://example.com/"
+        github: "https://github.com/nazmul910/Lawyer-Frontend",
+        live: "https://lawyer-frontend-5g5p.vercel.app/"
     },
     {
-        title: "C2 New1",
-        src: "background.jpg",
+        title: "Decor E-com website",
+        des:"Vue js,Node js,Tailwind",
+        src: "imgp6.png",
         color: "#EFE8D3",
-        github: "https://github.com/",
-        live: "https://example.com/"
+        github: "https://github.com/nazmul910/Decor-Frontend-E-com",
+        live: "https://decor-e-com-site.netlify.app/"
     },
     {
-        title: "C2 New3",
-        src: "maven.jpg",
+        title: "Dynamic E-com website",
+        des:"Html,Tailwind css,Vue js",
+        src: "imgp5.png",
         color: "#706D63",
-        github: "https://github.com/",
-        live: "https://example.com/"
+        github: "https://github.com/nazmul910/E-com-with-vue-js",
+        live: "https://e-shop-nazmul901.netlify.app/"
+    },
+        {
+        title: "Static Jewellery website",
+        des:"Html,Tailwind css,Vue js",
+        src: "imgp3.png",
+        color: "#706D63",
+        github: "https://github.com/nazmul910/e-com-juwellery",
+        live: "https://e-shop-by-nazmul.netlify.app/"
+    },
+        {
+        title: "Country Find",
+        des:"Html,Css,Ract",
+        src: "imgp4.png",
+        color: "#706D63",
+        github: "https://github.com/nazmul910/React_country_project",
+        live: "https://country-react-project1.netlify.app/"
     },
 ]
 
@@ -229,6 +249,9 @@ export default function Home() {
                             <h2 className={styles.popupTitle}>
                                 {selectedProject.title}
                             </h2>
+                            <p className={styles.popupDes}>
+                                {selectedProject.des}
+                            </p>
 
                             {/* Image */}
                             <div className={styles.popupImageContainer}>

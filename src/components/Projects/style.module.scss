@@ -37,7 +37,7 @@
         @media (max-width: 480px) { margin-bottom: 40px; }
     }
 
-    // ✅ Desktop only modal
+
     .modalContainer {
         height: 350px;
         width: 400px;
@@ -77,7 +77,7 @@
         }
     }
 
-    // ✅ Mobile modal — আলাদা class, screen center এ
+
     .mobileModal {
         height: 60vw;
         width: 80vw;
@@ -92,7 +92,7 @@
         z-index: 3;
     }
 
-    // ✅ View label mobile modal এর ভেতরে
+
     .mobileViewLabel {
         position: absolute;
         top: 50%;
@@ -103,7 +103,7 @@
         font-weight: 300;
         z-index: 4;
         pointer-events: none;
-        mix-blend-mode: difference; // ✅ যেকোনো background এ দেখা যাবে
+        mix-blend-mode: difference; 
     }
 
     .cursor, .cursorLabel {
@@ -134,7 +134,7 @@
   
 }
 
-// ✅ Backdrop — blur সহ full screen
+
 .backdrop {
     position: fixed;
     inset: 0;
@@ -144,12 +144,12 @@
     cursor: pointer;
 }
 
-// ✅ Popup card — screen center এ
+
 .popup {
     position: fixed;
     top: 50%;
     left: 50%;
-    // x/y framer-motion এ handle করছে
+
     width: min(600px, 90vw);
     max-height: 85vh;
     background-color: #1C1D20;
@@ -196,14 +196,25 @@
     font-size: 28px;
     font-weight: 300;
     margin: 0;
-    padding-right: 40px; // close btn এর জন্য
+    padding-right: 40px; 
 
     @media (max-width: 480px) {
         font-size: 22px;
     }
 }
 
-// ✅ Image container
+.popupDes{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+    padding-right: 30px; 
+
+    @media (max-width: 480px) {
+        font-size: 16px;
+    }    
+}
+
+
 .popupImageContainer {
     position: relative;
     width: 100%;
@@ -216,7 +227,7 @@
     }
 }
 
-// ✅ Links নিচে দুই পাশে
+
 .popupLinks {
     display: flex;
     gap: 16px;
