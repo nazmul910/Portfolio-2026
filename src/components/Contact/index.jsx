@@ -28,7 +28,7 @@ export default function index() {
     const rotate = useTransform(scrollYProgress, [0, 1], isMobile ? [90, 90] : [120, 90])
 
     return (
-        <motion.div style={{ y }} ref={container} className={styles.contact}>
+        <motion.div style={{ y }} ref={container} className={styles.contact} >
             <div className={styles.body}>
                 <div className={styles.title}>
                     <span>
@@ -73,7 +73,7 @@ export default function index() {
                     )}
                 </div>
 
-                <div className={styles.nav}>
+                <div className={styles.nav} id='contact'>
                     <Rounded>
                         <p>islamnasir910@gmail.com</p>
                     </Rounded>
@@ -96,12 +96,11 @@ export default function index() {
                     <div>
                         <span>
                             <h3>socials</h3>
-                            {/* ✅ mobile এ Magnetic বন্ধ */}
-                            {isMobile ? <p>Github</p> : <Magnetic><p>Github</p></Magnetic>}
+                            {isMobile ? <a href='https://github.com/nazmul910/' target='_black'>Github</a> : <Magnetic><a href='https://github.com/nazmul910/' target='_black'>Github</a></Magnetic>}
                         </span>
-                        {isMobile ? <p>Linkedin</p>  : <Magnetic><p>Linkedin</p></Magnetic>}
-                        {isMobile ? <p>Facebook</p>  : <Magnetic><p>Facebook</p></Magnetic>}
-                        {isMobile ? <p>Instagram</p> : <Magnetic><p>Instagram</p></Magnetic>}
+                        {isMobile ? <a href='https://www.linkedin.com/in/ni-nazmul4124/' target='_black'>Linkedin</a>  : <Magnetic><a href='https://www.linkedin.com/in/ni-nazmul4124/' target='_black'>Linkedin</a></Magnetic>}
+                        {isMobile ? <a href='https://www.facebook.com/ni.nazmul.58' target='_blank'>Facebook</a>  : <Magnetic><a href='https://www.facebook.com/ni.nazmul.58' target='_blank'>Facebook</a></Magnetic>}
+                        {/* {isMobile ? <p>Instagram</p> : <Magnetic><p>Instagram</p></Magnetic>} */}
                     </div>
                 </div>
             </div>

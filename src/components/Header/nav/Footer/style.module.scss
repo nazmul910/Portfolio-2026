@@ -11,7 +11,7 @@
     }
 
     @media (max-width: 768px) {
-        flex-direction: column; // ✅ mobile এ stack
+        flex-direction: column; 
         gap: 16px;
         font-size: 11px;
     }
@@ -19,5 +19,10 @@
     @media (max-width: 480px) {
         gap: 12px;
         font-size: 10px;
+    }
+
+    a{
+      text-decoration: none;
+      color: white;
     }
 }

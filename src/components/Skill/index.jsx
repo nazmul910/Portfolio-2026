@@ -107,7 +107,7 @@ export default function SlidingImages() {
   };
 
   return (
-    <div ref={container} className={styles.slidingImages}>
+    <div ref={container} className={styles.slidingImages} id="skill">
       {/* Slider 1 - left দিকে */}
       <div className={styles.sliderWrapper}>
         <div ref={sliderTrack1} className={styles.sliderTrack}>

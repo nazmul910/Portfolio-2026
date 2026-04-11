@@ -6,16 +6,35 @@ import { menuSlide, slide, scale } from "../animations";
 import Link from "next/link";
 import Curve from './Curve/index'
 import Footer from './Footer/index'
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const navItems = [
-    { title: "Home",    href: '/'        },
-    { title: "Work",    href: '/work'    },
-    { title: "About",   href: '/about'   },
-    { title: "Contact", href: '/contact' },
-    { title: "Skill",   href: '/skill'   },
+    { title: "Home",    href: '#hero'        },
+    { title: "Work",    href: '#project'    },
+    { title: "About",   href: '#about'   },
+    { title: "Contact", href: '#contact' },
+    { title: "Skill",   href: '#skill'   },
 ]
 
-function NavItem({ data, isActive, setSelectedIndicator }) {
+function NavItem({ data, isActive, setSelectedIndicator, onClose }) {
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        const target = document.querySelector(data.href);
+        if (!target) return;
+
+        gsap.to(window, {
+            scrollTo: target,
+            duration: 1.5,
+            ease: "power3.inOut",
+        });
+
+        onClose(); // nav close করবে
+    };
+
     return (
         <motion.div
             className={styles.navItem}
@@ -31,12 +50,12 @@ function NavItem({ data, isActive, setSelectedIndicator }) {
                 animate={isActive ? "open" : "closed"}
                 className={styles.indicator}
             />
-            <Link href={data.href}>{data.title}</Link>
+            <a href={data.href} onClick={handleClick}>{data.title}</a>
         </motion.div>
     )
 }
 
-export default function index() {
+export default function index({ setIsActive }) {  // setIsActive props নিন
     const pathname = usePathname();
     const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
@@ -62,6 +81,7 @@ export default function index() {
                             data={{ ...data, index }}
                             isActive={selectedIndicator === data.href}
                             setSelectedIndicator={setSelectedIndicator}
+                            onClose={() => setIsActive(false)} // nav বন্ধ করবে
                         />
                     ))}
                 </div>

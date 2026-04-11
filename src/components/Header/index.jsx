@@ -34,6 +34,14 @@ export default function index(){
         })
     },[])
 
+    const handleScroll = (e, target) => {
+    e.preventDefault();
+    const element = document.querySelector(target);
+    if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+};
+
     return(
         <>
           <div ref={header} className={styles.header}>
@@ -41,26 +49,26 @@ export default function index(){
                 <p className={styles.copyright}>©</p>
                 <div className={styles.name}>
                     <p className={styles.codeBy}>Code by</p>
-                    <p className={styles.dennis}>Dennis</p>
-                    <p className={styles.snellenberg}>Snellenberg</p>
+                    <p className={styles.dennis}>Nazmul</p>
+                    <p className={styles.snellenberg}>Hasan</p>
                 </div>
             </div>
             <div className={styles.nav}>
                 <Magnetic>
                     <div className={styles.el}>
-                        <a>Work</a>
+                        <a href="#project" onClick={(e) => handleScroll(e, "#project")}>Project</a>
                         <div className={styles.indicator}></div>
                     </div>
                 </Magnetic>
                 <Magnetic>
                     <div className={styles.el}>
-                        <a>About</a>
+                        <a href="#about" onClick={(e) => handleScroll(e, "#about")}>About</a>
                         <div className={styles.indicator}></div>
                     </div>
                 </Magnetic>
                 <Magnetic>
                     <div className={styles.el}>
-                        <a>Contact</a>
+                        <a href="#contact" onClick={(e) => handleScroll(e, "#contact")}>Contact</a>
                         <div className={styles.indicator}></div>
                     </div>
                 </Magnetic>
@@ -72,7 +80,7 @@ export default function index(){
             </Rounded>
         </div>
         <AnimatePresence mode="wait">
-            {isActive && <Nav />}
+            {isActive && <Nav setIsActive={setIsActive} />}
         </AnimatePresence>
         </>
     )
