@@ -1,38 +1,76 @@
-.project{
+.project {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 100px 50px 100px;
+    padding: 50px 100px;
     border-top: 1px solid rgb(201, 201, 201);
     cursor: pointer;
     transition: all 0.2s;
 
-    h2{
+    @media (max-width: 1024px) {
+        padding: 36px 60px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 24px 30px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 20px 16px;
+        flex-direction: column;  // ✅ mobile এ stack
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    h2 {
         font-size: 60px;
-        margin: 0px;
+        margin: 0;
         font-weight: 400;
         transition: all 0.4s;
+
+        @media (max-width: 1024px) {
+            font-size: 42px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 28px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 22px;
+        }
     }
 
-    p{
+    p {
         transition: all 0.4s;
         font-weight: 300;
+
+        @media (max-width: 768px) {
+            font-size: 13px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 12px;
+        }
     }
 
-    &:last-of-type{
+    &:last-of-type {
         border-bottom: 1px solid rgb(201, 201, 201);
     }
 
-    &:hover{
-        opacity: 0.5;
+    // ✅ touch device এ hover effect নেই, তাই 768 এর নিচে disable
+    @media (min-width: 769px) {
+        &:hover {
+            opacity: 0.5;
 
-        h2{
-            transform: translateX(-10px);
-        }
+            h2 {
+                transform: translateX(-10px);
+            }
 
-        p{
-            transform: translateX(10px);
+            p {
+                transform: translateX(10px);
+            }
         }
     }
 }

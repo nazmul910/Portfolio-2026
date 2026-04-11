@@ -1,14 +1,32 @@
-.link{
+.link {
     position: relative;
     display: flex;
     align-items: center;
-    
-    .indicator{
+
+    .indicator {
         width: 10px;
         height: 10px;
         background-color: white;
         border-radius: 50%;
         position: absolute;
         left: -30px;
+
+        @media (max-width: 1024px) {
+            width: 8px;
+            height: 8px;
+            left: -22px;
+        }
+
+        @media (max-width: 768px) {
+            width: 7px;
+            height: 7px;
+            left: -18px;
+        }
+
+        @media (max-width: 480px) {
+            width: 6px;
+            height: 6px;
+            left: -14px;
+        }
     }
 }

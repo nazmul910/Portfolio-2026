@@ -1,4 +1,4 @@
-.slidingImages{
+.slidingImages {
     display: flex;
     flex-direction: column;
     gap: 3vw;
@@ -6,33 +6,71 @@
     margin-top: 200px;
     background-color: white;
     z-index: 1;
-    .slider{
+    overflow: hidden; // ✅ horizontal scroll বন্ধ
+
+    @media (max-width: 1024px) { margin-top: 140px; gap: 4vw; }
+    @media (max-width: 768px)  { margin-top: 100px; gap: 5vw; }
+    @media (max-width: 480px)  { margin-top: 60px;  gap: 6vw; }
+
+    .slider {
         display: flex;
         position: relative;
         gap: 3vw;
         width: 120vw;
         left: -10vw;
-        .project{
-            width: 25%;
+
+        @media (max-width: 1024px) {
+            gap: 4vw;
+            width: 120vw;
+            left: -10vw;
+        }
+
+        @media (max-width: 768px) {
+            width: 160vw;
+            left: -30vw; // ✅ center এ রাখতে: (160-100)/2 = 30
+            gap: 5vw;
+        }
+
+        @media (max-width: 480px) {
+            width: 220vw;
+            left: -60vw; // ✅ center এ রাখতে: (220-100)/2 = 60
+            gap: 6vw;
+        }
+
+        .project {
+            width: 25%;   // ✅ slider width এর 25% — সবসময় 4টা card
             height: 20vw;
             display: flex;
             align-items: center;
             justify-content: center;
-            .imageContainer{
+            border-radius: 8px;
+            overflow: hidden; // ✅ image overflow বন্ধ
+
+            @media (max-width: 768px) { height: 30vw; }
+            @media (max-width: 480px) { height: 40vw; }
+
+            .imageContainer {
                 position: relative;
-                width: 80%;
-                height: 80%;
-                img{
+                width: 100%; // ✅ 80% থেকে 100% — পুরো card fill করবে
+                height: 100%;
+
+                img {
                     object-fit: cover;
                 }
             }
         }
     }
-    .circleContainer{
-        background-color: red;
+
+    .circleContainer {
         position: relative;
         margin-top: 100px;
-        .circle{
+        background-color: #ef4444;
+
+        @media (max-width: 1024px) { margin-top: 70px; }
+        @media (max-width: 768px)  { margin-top: 50px; }
+        @media (max-width: 480px)  { margin-top: 30px; }
+
+        .circle {
             height: 1550%;
             width: 120%;
             left: -10%;
@@ -41,6 +79,25 @@
             z-index: 1;
             position: absolute;
             box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+
+            @media (max-width: 1024px) {
+                height: 1200%;
+                box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.6);
+            }
+
+            @media (max-width: 768px) {
+                height: 800%;
+                width: 140%;
+                left: -20%;
+                box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.5);
+            }
+
+            @media (max-width: 480px) {
+                height: 500%;
+                width: 160%;
+                left: -30%;
+                box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+            }
         }
     }
 }

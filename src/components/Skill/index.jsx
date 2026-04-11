@@ -7,17 +7,50 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const slider1 = [
-  { src: "react.png", color: "#e3e5e7" },
-  { src: "react.png", color: "#d6d7dc" },
-  { src: "react.png", color: "#e3e3e3" },
-  { src: "react.png", color: "#21242b" },
+  { src: "img1.png" },
+  { src: "img2.png", },
+  { src: "img3.png", },
+  { src: "img5.png",  },
+  { src: "img7.png",  },
+  { src: "img12.png",  },
+  { src: "img11.png",  },
+  { src: "img6.png",  },
+  { src: "img9.png", },
+  { src: "img10.png",  },
+  { src: "img8.png",  },
+  { src: "img22.png",  },
+  { src: "img15.png",  },
+  { src: "img13.png", },
+  { src: "img16.png",  },
+  { src: "img20.png",  },
+  { src: "img24.png",  },
+  { src: "img17.png",  },
+  { src: "img18.png",  },
+  { src: "img23.png",  },
+
 ];
 
 const slider2 = [
-  { src: "react.png", color: "#e3e5e7" },
-  { src: "react.png", color: "#d6d7dc" },
-  { src: "react.png", color: "#e3e3e3" },
-  { src: "react.png", color: "#21242b" },
+  { src: "img1.png" },
+  { src: "img2.png", },
+  { src: "img3.png", },
+  { src: "img5.png",  },
+  { src: "img7.png",  },
+  { src: "img12.png",  },
+  { src: "img11.png",  },
+  { src: "img6.png",  },
+  { src: "img9.png", },
+  { src: "img10.png",  },
+  { src: "img8.png",  },
+  { src: "img22.png",  },
+  { src: "img15.png",  },
+  { src: "img13.png", },
+  { src: "img16.png",  },
+  { src: "img20.png",  },
+  { src: "img24.png",  },
+  { src: "img17.png",  },
+  { src: "img18.png",  },
+  { src: "img23.png",  },
 ];
 
 export default function SlidingImages() {
@@ -97,7 +130,7 @@ export default function SlidingImages() {
               <div
                 key={index}
                 className={styles.project}
-                style={{ backgroundColor: project.color }}
+                
               >
                 <div className={styles.imageContainer}>
                   <Image fill alt="image" src={`/images/${project.src}`} />
@@ -116,7 +149,7 @@ export default function SlidingImages() {
               <div
                 key={index}
                 className={styles.project}
-                style={{ backgroundColor: project.color }}
+               
               >
                 <div className={styles.imageContainer}>
                   <Image fill alt="image" src={`/images/${project.src}`} />
