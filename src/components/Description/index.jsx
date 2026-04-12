@@ -22,7 +22,7 @@ export default function index () {
                                 </motion.span>
                             </span>
                         })
-                    }
+                    } 
                 </p>
                 <motion.p variants={opacity} animate={isInview ? "open" : "closed"}>
                     The combination of my passing for desigin, code & intrractioon me in a unique place in the web design world.

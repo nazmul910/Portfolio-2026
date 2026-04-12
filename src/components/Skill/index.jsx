@@ -113,19 +113,24 @@ export default function SlidingImages() {
 
   return (
     <div ref={container} className={styles.slidingImages} id="skill">
-      <div ref={description}>
-                 <p>
-                    {
-                        phrase.split(" ").map((word,index) =>{
-                            return <span key={index} className={styles.mask}>
-                                <motion.span variants={slideUp} custom={index} animate={isInview ? "open" : "closed"} key={index}>
-                                    {word}
-                                </motion.span>
-                            </span>
-                        })
-                    }
-                </p>       
-      </div>
+<div ref={description} className={styles.headingWrapper}>
+    <p>
+        {phrase.split(" ").map((word, index) => {
+            return (
+                <span key={index} className={styles.mask}>
+                    <motion.span
+                        variants={slideUp}
+                        custom={index}
+                        animate={isInview ? "open" : "closed"}
+                        initial="initial"  
+                    >
+                        {word}
+                    </motion.span>
+                </span>
+            );
+        })}
+    </p>
+</div>
       <div className={styles.sliderWrapper}>
         <div ref={sliderTrack1} className={styles.sliderTrack}>
           <div ref={firstText1} className={styles.slider}>
