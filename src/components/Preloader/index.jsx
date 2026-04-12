@@ -6,7 +6,7 @@ import {opacity, slideUp} from './anim'
 import { motion } from 'framer-motion'
 
 
-const words = ["Hello","Ciao","Ola","Halla","Hello","Guten tag"];
+const words = ["Hello, World!","Bonjour le monde!","Hola Mundo!","Hallo Welt!","Ciao mondo!","Olá Mundo!","Hej världen!","Hallo Wereld!"];
 
 export default function Index () {
     const [index , setIndex] = useState(0);
