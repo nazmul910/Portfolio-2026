@@ -171,12 +171,53 @@
 .right {
     display: flex;
     flex-direction: column;
-    gap: 40px;  /* আগে 30px ছিল, বাড়িয়ে দিলাম text আর button এর মাঝে space এর জন্য */
+    gap: 40px; 
     position: relative;
 
     a{
         text-decoration: none;
+        overflow: hidden !important;
+
+        
     }
+    .button1 {
+    width: 160px;
+    height: 160px;
+    background-color: #1C1D20;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    overflow: hidden !important;
+    justify-content: center;
+    cursor: pointer;
+
+    @media (max-width: 1024px) {
+        width: 130px;
+        height: 130px;
+        overflow: hidden !important;
+    }
+
+    @media (max-width: 480px) {
+        width: 110px;
+        height: 110px;
+        overflow: hidden !important;
+    }
+
+    p {
+        margin: 0;
+        font-size: 25px !important;
+        font-weight: 400;
+        color: rgb(212, 212, 212) !important;
+        position: relative;
+        z-index: 10;
+        text-align: center;
+
+        @media (max-width: 480px) {
+            font-size: 13px;
+        }
+    }
+}
 
     p:first-of-type {
         font-size: clamp(18px, 2.5vw, 30px);
@@ -195,51 +236,5 @@
     }
 }
 
-.subText {
-    font-size: 16px;
-    font-weight: 300;
-    color: #666;
-    line-height: 1.7;
-    margin: 0;
 
-    @media (max-width: 480px) {
-        font-size: 14px;
-    }
-}
 
-.button {
-    width: 160px;
-    height: 160px;
-    background-color: #1C1D20;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-      overflow: hidden;
-    justify-content: center;
-    cursor: pointer;
-
-    @media (max-width: 1024px) {
-        width: 130px;
-        height: 130px;
-    }
-
-    @media (max-width: 480px) {
-        width: 110px;
-        height: 110px;
-    }
-
-    p {
-        margin: 0;
-        font-size: 15px;
-        font-weight: 400;
-        color: white !important;
-        position: relative;
-        z-index: 10;
-        text-align: center;
-
-        @media (max-width: 480px) {
-            font-size: 13px;
-        }
-    }
-}

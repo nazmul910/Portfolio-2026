@@ -124,10 +124,9 @@ export default function index() {
         ))}
     </p>
 
-
-    <div data-scroll data-scroll-speed={0.1}>
-        <a href="https://drive.google.com/file/d/1VFVa4mplU0xyqg-78fgyUhbfPl11HAcX/view?usp=sharing" target="_blank">
-            <Rounded className={styles.button}>
+    <div data-scroll data-scroll-speed={0.5} className={styles.over1}>
+        <a href="https://drive.google.com/file/d/1VFVa4mplU0xyqg-78fgyUhbfPl11HAcX/view?usp=sharing" target="_blank" >
+            <Rounded className={styles.button1}>
                 <p>Get Resume</p>
             </Rounded>
         </a>
