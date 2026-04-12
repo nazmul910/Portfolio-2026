@@ -62,7 +62,6 @@ export default function index() {
                         </motion.div>
                     )}
 
-                    {/* ✅ mobile এ svg hide */}
                     {!isMobile && (
                         <motion.svg
                             style={{ rotate, scale: 2 }}
@@ -93,7 +92,7 @@ export default function index() {
                             <p>2026 © Edition</p>
                         </span>
                         <span>
-                            <h3>Version</h3>
+                            <h3>Time</h3>
                             <p>{date}</p>
                         </span>
                     </div>

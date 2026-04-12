@@ -21,6 +21,40 @@
     }
 }
 
+.headingWrapper {
+    text-align: center;
+    padding: 0 2rem 1.5rem;
+    overflow: hidden;
+}
+
+.headingLine {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 0.4em;
+    perspective: 800px;  
+}
+
+.word {
+    display: inline-block;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #000;
+    line-height: 1.1;
+
+    @media (max-width: 768px) { font-size: clamp(1.5rem, 6vw, 2rem); }
+}
+
+.underline {
+    height: 3px;
+    width: 180px;
+    background: #334BD3;    
+    margin: 0.6rem auto 0;
+    transform-origin: left;
+    border-radius: 2px;
+}
+
 .sliderWrapper {
     overflow: hidden;
     width: 100%;

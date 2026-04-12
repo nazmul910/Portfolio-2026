@@ -3,7 +3,9 @@
 import { useRef, useLayoutEffect } from "react";
 import styles from "./style.module.scss";
 import Image from "next/image";
+import { slideUp, opacity } from "./animation"
 import gsap from "gsap";
+import { motion, useInView } from "framer-motion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const slider1 = [
@@ -53,17 +55,17 @@ const slider2 = [
   { src: "img23.png",  },
 ];
 
+const headingWords = ["Technologies", "I", "Work", "With"];
+
 export default function SlidingImages() {
   const container = useRef(null);
 
-  // Slider 1: left দিকে যাবে (direction = -1)
   const firstText1 = useRef(null);
   const secondText1 = useRef(null);
   const sliderTrack1 = useRef(null);
   let xPercent1 = 0;
   let direction1 = -1;
 
-  // Slider 2: right দিকে যাবে (direction = +1)
   const firstText2 = useRef(null);
   const secondText2 = useRef(null);
   const sliderTrack2 = useRef(null);
@@ -73,7 +75,6 @@ export default function SlidingImages() {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Scroll করলে direction পাল্টে যাবে
     ScrollTrigger.create({
       trigger: container.current,
       start: "top bottom",
@@ -106,9 +107,25 @@ export default function SlidingImages() {
     requestAnimationFrame(animate);
   };
 
+      const description = useRef(null)
+   const isInview = useInView(description);
+   const phrase = "Technologies I work with"
+
   return (
     <div ref={container} className={styles.slidingImages} id="skill">
-      {/* Slider 1 - left দিকে */}
+      <div ref={description}>
+                 <p>
+                    {
+                        phrase.split(" ").map((word,index) =>{
+                            return <span key={index} className={styles.mask}>
+                                <motion.span variants={slideUp} custom={index} animate={isInview ? "open" : "closed"} key={index}>
+                                    {word}
+                                </motion.span>
+                            </span>
+                        })
+                    }
+                </p>       
+      </div>
       <div className={styles.sliderWrapper}>
         <div ref={sliderTrack1} className={styles.sliderTrack}>
           <div ref={firstText1} className={styles.slider}>
@@ -124,7 +141,6 @@ export default function SlidingImages() {
               </div>
             ))}
           </div>
-          {/* Duplicate for seamless loop */}
           <div ref={secondText1} className={styles.slider}>
             {slider1.map((project, index) => (
               <div
@@ -140,8 +156,6 @@ export default function SlidingImages() {
           </div>
         </div>
       </div>
-
-      {/* Slider 2 - right দিকে */}
       <div className={styles.sliderWrapper}>
         <div ref={sliderTrack2} className={styles.sliderTrack}>
           <div ref={firstText2} className={styles.slider}>
