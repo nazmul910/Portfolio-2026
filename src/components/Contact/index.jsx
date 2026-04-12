@@ -22,7 +22,12 @@ export default function index() {
         offset: ["start end", "end end"]
     });
 
-    // ✅ mobile এ animation বন্ধ
+    const date = new Date().toLocaleDateString('en-GB', {
+    timeZone: 'Asia/Dhaka'
+});
+
+    
+
     const x = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 100])
     const y = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [-500, 0])
     const rotate = useTransform(scrollYProgress, [0, 1], isMobile ? [90, 90] : [120, 90])
@@ -43,7 +48,6 @@ export default function index() {
                     </span>
                     <h2>together</h2>
 
-                    {/* ✅ mobile এ x motion বন্ধ */}
                     {isMobile ? (
                         <div className={styles.buttonContainer}>
                             <Rounded backgroundColor="#334BD3" className={styles.button}>
@@ -90,7 +94,7 @@ export default function index() {
                         </span>
                         <span>
                             <h3>Version</h3>
-                            <p>11:49 PM GMT+2</p>
+                            <p>{date}</p>
                         </span>
                     </div>
                     <div>
