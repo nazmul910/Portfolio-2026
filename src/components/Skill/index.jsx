@@ -105,7 +105,7 @@ export default function SlidingImages() {
     xPercent2 += 0.05 * direction2;
 
     requestAnimationFrame(animate);
-  };
+  }; 
 
       const description = useRef(null)
    const isInview = useInView(description);
