@@ -51,7 +51,7 @@ a {
 
 body{
   margin: 0px;
-  overflow: hidden;
+  /* overflow: hidden; */
   cursor:wait;
   scroll-behavior:smooth;
 }
