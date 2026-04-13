@@ -87,6 +87,29 @@
                 }
             }
         }
+        @media (min-width: 480px) {
+            &:hover {
+                .copyright {
+                    transform: rotate(360deg);
+                }
+
+                .name {
+                    padding-right: 30px;
+
+                    .codeBy {
+                        transform: translateX(-100%);
+                    }
+
+                    .dennis {
+                        transform: translateX(-55px);
+                    }
+
+                    .snellenberg {
+                        display: hidden;
+                    }
+                }
+            }
+        }
     }
 
     .nav {
@@ -116,7 +139,7 @@
                     }
                 }
             }
-
+ 
             .indicator {
                 position: absolute;
                 width: 5px;

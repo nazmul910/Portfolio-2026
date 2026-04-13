@@ -52,7 +52,7 @@ export default function index(){
                     <p className={styles.dennis}>Nazmul</p>
                     <p className={styles.snellenberg}>Hasan</p>
                 </div>
-            </div>
+            </div> 
             <div className={styles.nav}>
                 <Magnetic>
                     <div className={styles.el}>
