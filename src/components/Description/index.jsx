@@ -118,7 +118,7 @@ export default function index() {
                     initial="initial"
                 >
                     {word}
-                </motion.span>
+                </motion.span> 
             </span>
         ))}
     </p>

@@ -18,7 +18,6 @@
     }
 }
 
-/* About Title — center এ */
 .aboutTitle {
     font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 700;
@@ -36,7 +35,6 @@
     }
 }
 
-/* 2 column layout */
 .body {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -53,7 +51,6 @@
     }
 }
 
-/* LEFT — Experience */
 .left {
     display: flex;
     flex-direction: column;
@@ -167,61 +164,19 @@
     letter-spacing: 0.03em;
 }
 
-/* RIGHT — Text */
 .right {
     display: flex;
     flex-direction: column;
-    gap: 40px; 
+    gap: 40px;
     position: relative;
 
-    a{
+    a {
         text-decoration: none;
         overflow: hidden !important;
-
-        
     }
 
-    .button1 {
-    width: 160px;
-    height: 160px;
-    background-color: #1C1D20;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    overflow: hidden !important;
-    justify-content: center;
-    cursor: pointer;
-
-    @media (max-width: 1024px) {
-        width: 130px;
-        height: 130px;
-        overflow: hidden !important;
-    }
-
-    @media (max-width: 480px) {
-        width: 110px;
-        height: 110px;
-        overflow: hidden !important;
-    }
-
-    p {
-        margin: 0;
-        font-size: 25px !important;
-        font-weight: 400;
-        color: rgb(212, 212, 212) ;
-        position: relative;
-        z-index: 10;
-        font-size: 24px;
-        text-align: center;
-
-        @media (max-width: 480px) {
-            font-size: 13px;
-        }
-    }
-}
-
-    p:first-of-type {
+    /* ← fix: direct child only */
+    > p:first-of-type {
         font-size: clamp(18px, 2.5vw, 30px);
         line-height: 1.4;
         font-weight: 500;
@@ -230,13 +185,47 @@
 
         .mask {
             display: inline-block;
-            overflow: hidden;
             line-height: 1.4;
             margin-right: 4px;
             padding-bottom: 2px;
         }
     }
+
+    .button1 {
+        width: 160px;
+        height: 160px;
+        background-color: #1C1D20;
+        border-radius: 50% !important;
+        border: none !important;
+        padding: 0 !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        @media (max-width: 1024px) {
+            width: 130px;
+            height: 130px;
+        }
+
+        @media (max-width: 480px) {
+            width: 110px;
+            height: 110px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 16px !important;
+            font-weight: 400;
+            color: rgb(212, 212, 212) !important;
+            position: relative;
+            z-index: 100 !important;
+            text-align: center;
+            pointer-events: none;
+
+            @media (max-width: 480px) {
+                font-size: 13px !important;
+            }
+        }
+    }
 }
-
-
-
