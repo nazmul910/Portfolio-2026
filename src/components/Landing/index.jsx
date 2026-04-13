@@ -37,7 +37,7 @@ export default function Home () {
     const animate =  () =>{
         if(xPercent < -100){
             xPercent = 0;
-        }
+        } 
         else if(xPercent > 0){
             xPercent = -100;
         }
