@@ -2,8 +2,7 @@ import styles from "./style.module.scss"
 import { useInView, motion } from "framer-motion"
 import { useRef } from "react"
 import { slideUp, opacity } from "./animation"
-import Rounded from "../../common/RoundedButton/index"
-
+import Rounded2 from "../../common/RoundedButton2/index"
 export default function index() {
     const phrase = "Frontend Developer with strong knowledge of React.js, Vue.js, and Next.js. Skilled in building responsive, user-friendly web interfaces and converting designs into clean, reusable components. Experienced in real-world projects with a strong focus on performance, accessibility, and modern frontend best practices."
 
@@ -126,9 +125,9 @@ export default function index() {
 
     <div data-scroll data-scroll-speed={0.5} className={styles.over1}>
         <a href="https://drive.google.com/file/d/1VFVa4mplU0xyqg-78fgyUhbfPl11HAcX/view?usp=sharing" target="_blank" >
-            <Rounded className={styles.button1}>
+            <Rounded2 className={styles.button1}>
                 <p>Get Resume</p>
-            </Rounded>
+            </Rounded2>
         </a>
     </div>
 </div>
