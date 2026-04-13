@@ -7,14 +7,14 @@ import Image from "next/image";
 const slider1 = [
     { src: "locomotive.png", color: "#e3e5e7" },
     { src: "c2.jpg",         color: "#d6d7dc" },
-    { src: "background1.png",color: "#e3e3e3" },
+    { src: "locomotive.png",color: "#e3e3e3" },
     { src: "maven.jpg",      color: "#21242b" },
 ]
 
 const slider2 = [
     { src: "locomotive.png", color: "#e3e5e7" },
     { src: "c2.jpg",         color: "#d6d7dc" },
-    { src: "background1.png",color: "#e3e3e3" },
+    { src: "locomotive.png",color: "#e3e3e3" },
     { src: "maven.jpg",      color: "#21242b" },
 ]
 
@@ -26,7 +26,7 @@ export default function SlidingImages() {
         offset: ["start end", "end start"]
     });
 
-    // ✅ vw এ transform — screen size অনুযায়ী কাজ করবে
+
     const x1 = useTransform(scrollYProgress, [0, 1], ["0vw", "10vw"])
     const x2 = useTransform(scrollYProgress, [0, 1], ["0vw", "-10vw"])
     const height = useTransform(scrollYProgress, [0, 0.9], ["50px", "0px"])

@@ -1,7 +1,7 @@
 .header {
     position: absolute;
     display: flex;
-    z-index: 999;
+    z-index: 50;
     top: 0;
     color: white;
     padding: 35px;
@@ -55,10 +55,10 @@
                 &:nth-of-type(3) {
                     position: absolute;
                     left: 120px;
-                    padding-left: 0.3em; 
+                    padding-left: 0.3em;
 
                     @media (max-width: 480px) {
-                        left: 90px;
+                        display: none;
                     }
                 }
             }
@@ -87,7 +87,8 @@
                 }
             }
         }
-        @media (min-width: 480px) {
+
+        @media (min-width: 480px) and (max-width: 768px) {
             &:hover {
                 .copyright {
                     transform: rotate(360deg);
@@ -102,10 +103,6 @@
 
                     .dennis {
                         transform: translateX(-55px);
-                    }
-
-                    .snellenberg {
-                        display: hidden;
                     }
                 }
             }
@@ -139,7 +136,7 @@
                     }
                 }
             }
- 
+
             .indicator {
                 position: absolute;
                 width: 5px;
@@ -173,7 +170,7 @@
     transform: scale(0);
     position: fixed;
     right: 0;
-    z-index: 4;
+    z-index: 9999;
 
     .button {
         position: relative;

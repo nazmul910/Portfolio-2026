@@ -41,7 +41,7 @@ export default function index() {
                             <Image
                                 fill={true}
                                 alt="image"
-                                src="/images/background1.png"
+                                src="/images/call1.png"
                             />
                         </div>
                         <h2>Let's work</h2>
