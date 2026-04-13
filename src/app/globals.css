@@ -49,9 +49,22 @@ a {
 } */
 
 
-body{
+body {
   margin: 0px;
-  /* overflow: hidden; */
-  cursor:wait;
-  scroll-behavior:smooth;
+  cursor: wait;
+  scroll-behavior: smooth;
+  overflow: hidden; 
+}
+
+
+@media (max-width: 1024px) {
+  body {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: visible;
+  }
 }
