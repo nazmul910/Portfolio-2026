@@ -37,6 +37,17 @@
         @media (max-width: 480px) { margin-bottom: 40px; }
     }
 
+    .projectTitle{
+        padding-bottom: 50px;
+
+        h1{
+            font-size: 56px;
+            @media (max-width: 768px) { font-size: 32px; }
+            @media (max-width: 480px) { font-size: 40px; }
+        }
+        @media (max-width: 768px) { padding-bottom: 40px; }
+        @media (max-width: 480px) { padding-bottom: 30px; }
+    }
 
     .modalContainer {
         height: 350px;
