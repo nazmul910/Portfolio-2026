@@ -144,6 +144,9 @@ export default function Home() {
                 onMouseMove={(e) => { if (!isMobile) moveItems(e.clientX, e.clientY) }}
                 className={styles.projects} id="project"
             >
+                <div className={styles.projectTitle}>
+                    <h1>My Projects</h1>
+                </div>
                 <div className={styles.body}>
                     {projects.map((project, index) => (
                         <Project
