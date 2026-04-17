@@ -58,23 +58,59 @@
 }
 
 .expTitle {
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #888;
-    margin: 0 0 8px;
+    color: #555;
+    margin: 0 0 16px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .expCard {
-    border: 1px solid #e5e5e5;
-    border-radius: 16px;
-    padding: 28px;
-    background: #fafafa;
+    border: 2px solid rgba(28, 29, 32, 0.15);
+    border-radius: 24px;
+    padding: 48px 40px;
+    background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        transition: left 0.5s ease;
+    }
+
+    &:hover {
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(0, 0, 0, 0.08);
+        transform: translateY(-4px);
+        border-color: rgba(28, 29, 32, 0.25);
+        background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+
+        &::before {
+            left: 100%;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        padding: 40px 32px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 32px 24px;
+        border-radius: 20px;
+    }
 
     @media (max-width: 480px) {
-        padding: 18px;
-        border-radius: 12px;
+        padding: 24px 18px;
+        border-radius: 16px;
     }
 }
 
@@ -93,26 +129,38 @@
 .expLeft {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
 }
 
 .expCompany {
-    font-size: 17px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 800;
     color: #1C1D20;
     letter-spacing: -0.02em;
+    line-height: 1.2;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
 }
 
 .expRole {
-    font-size: 13px;
-    color: #666;
+    font-size: 16px;
+    color: #555;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 }
 
 .expMeta {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 4px;
+    gap: 8px;
 
     @media (max-width: 500px) {
         align-items: flex-start;
@@ -120,48 +168,70 @@
 }
 
 .expLocation {
-    font-size: 12px;
-    color: #999;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    letter-spacing: 0.4px;
 }
 
 .expDate {
-    font-size: 12px;
-    font-weight: 500;
-    color: #334BD3;
-    background: rgba(51, 75, 211, 0.08);
-    padding: 2px 10px;
-    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #333 0%, #1C1D20 100%);
+    padding: 8px 16px;
+    border-radius: 24px;
+    letter-spacing: 0.05em;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    text-transform: capitalize;
 }
 
 .expDivider {
-    height: 1px;
-    background: #e5e5e5;
-    margin: 20px 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ddd 0%, #bbb 100%);
+    margin: 28px 0;
     transform-origin: left;
+    opacity: 0.8;
+    border-radius: 2px;
 }
 
 .expDesc {
-    font-size: 14px;
-    line-height: 1.7;
-    color: #555;
-    font-weight: 300;
-    margin: 0 0 16px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #333;
+    font-weight: 400;
+    margin: 0 0 20px;
+    letter-spacing: 0.4px;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 }
 
 .expTags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 12px;
+    margin-top: 8px;
 }
 
 .tag {
-    font-size: 11px;
-    font-weight: 500;
-    color: #1C1D20;
-    background: #efefef;
-    padding: 4px 12px;
-    border-radius: 20px;
-    letter-spacing: 0.03em;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #333 0%, #1C1D20 100%);
+    padding: 8px 16px;
+    border-radius: 24px;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+    display: inline-block;
+    text-transform: capitalize;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
 }
 
 .right {
