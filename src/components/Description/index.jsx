@@ -123,7 +123,7 @@ export default function index() {
         ))}
     </p>
 
-    <div data-scroll data-scroll-speed={0.5} className={styles.over1}>
+    <div data-scroll data-scroll-speed={0.1} className={styles.over1}>
         <a href="https://drive.google.com/file/d/1eYLZ8iZ8-pMdFZk-OUXmFSSPlhTGJtSX/view?usp=sharing" target="_blank" >
             <Rounded2 className={styles.button1}>
                 <p>Get Resume</p>

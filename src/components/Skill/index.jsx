@@ -9,50 +9,50 @@ import { motion, useInView } from "framer-motion";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const slider1 = [
-  { src: "img1.png" },
-  { src: "img2.png", },
-  { src: "img3.png", },
-  { src: "img5.png",  },
-  { src: "img7.png",  },
-  { src: "img12.png",  },
-  { src: "img11.png",  },
-  { src: "img6.png",  },
-  { src: "img9.png", },
-  { src: "img10.png",  },
-  { src: "img8.png",  },
-  { src: "img22.png",  },
-  { src: "img15.png",  },
-  { src: "img13.png", },
-  { src: "img16.png",  },
-  { src: "img20.png",  },
-  { src: "img24.png",  },
-  { src: "img17.png",  },
-  { src: "img18.png",  },
-  { src: "img23.png",  },
+  { src: "img1.png", level: "Advanced" },
+  { src: "img2.png", level: "Intermediate" },
+  { src: "img3.png", level: "Advanced" },
+  { src: "img5.png", level: "Intermediate" },
+  { src: "img7.png", level: "Learning" },
+  { src: "img12.png", level: "Advanced" },
+  { src: "img11.png", level: "Intermediate" },
+  { src: "img6.png", level: "Advanced" },
+  { src: "img9.png", level: "Learning" },
+  { src: "img10.png", level: "Intermediate" },
+  { src: "img8.png", level: "Advanced" },
+  { src: "img22.png", level: "Learning" },
+  { src: "img15.png", level: "Intermediate" },
+  { src: "img13.png", level: "Advanced" },
+  { src: "img16.png", level: "Learning" },
+  { src: "img20.png", level: "Intermediate" },
+  { src: "img24.png", level: "Advanced" },
+  { src: "img17.png", level: "Learning" },
+  { src: "img18.png", level: "Intermediate" },
+  { src: "img23.png", level: "Advanced" },
 
 ];
 
 const slider2 = [
-  { src: "img1.png" },
-  { src: "img2.png", },
-  { src: "img3.png", },
-  { src: "img5.png",  },
-  { src: "img7.png",  },
-  { src: "img12.png",  },
-  { src: "img11.png",  },
-  { src: "img6.png",  },
-  { src: "img9.png", },
-  { src: "img10.png",  },
-  { src: "img8.png",  },
-  { src: "img22.png",  },
-  { src: "img15.png",  },
-  { src: "img13.png", },
-  { src: "img16.png",  },
-  { src: "img20.png",  },
-  { src: "img24.png",  },
-  { src: "img17.png",  },
-  { src: "img18.png",  },
-  { src: "img23.png",  },
+  { src: "img1.png", level: "Advanced" },
+  { src: "img2.png", level: "Intermediate" },
+  { src: "img3.png", level: "Advanced" },
+  { src: "img5.png", level: "Intermediate" },
+  { src: "img7.png", level: "Learning" },
+  { src: "img12.png", level: "Advanced" },
+  { src: "img11.png", level: "Intermediate" },
+  { src: "img6.png", level: "Advanced" },
+  { src: "img9.png", level: "Learning" },
+  { src: "img10.png", level: "Intermediate" },
+  { src: "img8.png", level: "Advanced" },
+  { src: "img22.png", level: "Learning" },
+  { src: "img15.png", level: "Intermediate" },
+  { src: "img13.png", level: "Advanced" },
+  { src: "img16.png", level: "Learning" },
+  { src: "img20.png", level: "Intermediate" },
+  { src: "img24.png", level: "Advanced" },
+  { src: "img17.png", level: "Learning" },
+  { src: "img18.png", level: "Intermediate" },
+  { src: "img23.png", level: "Advanced" },
 ];
 
 const headingWords = ["Technologies", "I", "Work", "With"];
@@ -143,6 +143,7 @@ export default function SlidingImages() {
                 <div className={styles.imageContainer}>
                   <Image fill alt="image" src={`/images/${project.src}`} />
                 </div>
+                <div className={styles.levelText}>{project.level}</div>
               </div>
             ))}
           </div>
@@ -173,6 +174,7 @@ export default function SlidingImages() {
                 <div className={styles.imageContainer}>
                   <Image fill alt="image" src={`/images/${project.src}`} />
                 </div>
+                <div className={styles.levelText}>{project.level}</div>
               </div>
             ))}
           </div>
@@ -181,11 +183,11 @@ export default function SlidingImages() {
               <div
                 key={index}
                 className={styles.project}
-                style={{ backgroundColor: project.color }}
               >
                 <div className={styles.imageContainer}>
                   <Image fill alt="image" src={`/images/${project.src}`} />
                 </div>
+                <div className={styles.levelText}>{project.level}</div>
               </div>
             ))}
           </div>
