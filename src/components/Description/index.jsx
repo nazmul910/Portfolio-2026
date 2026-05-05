@@ -62,7 +62,7 @@ export default function index() {
                                     animate={isExpInview ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                                     transition={{ duration: 0.5, delay: 0.45 }}
                                 >
-                                    Frontend Developer (Intern)
+                                    FullStack Developer
                                 </motion.span>
                             </div>
                             <motion.div
@@ -72,7 +72,7 @@ export default function index() {
                                 transition={{ duration: 0.5, delay: 0.4 }}
                             >
                                 <span className={styles.expLocation}>Dhaka, Bangladesh</span>
-                                <span className={styles.expDate}>August – Present</span>
+                                <span className={styles.expDate}>May 2025 – Present</span>
                             </motion.div>
                         </div>
 
