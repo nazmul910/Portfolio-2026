@@ -4,7 +4,7 @@ import { useRef } from "react"
 import { slideUp, opacity } from "./animation"
 import Rounded2 from "../../common/RoundedButton2/index"
 export default function index() {
-    const phrase = "Frontend Developer with strong knowledge of React.js, Vue.js, and Next.js. Skilled in building responsive, user-friendly web interfaces and converting designs into clean, reusable components. Experienced in real-world projects with a strong focus on performance, accessibility, and modern frontend best practices."
+    const phrase = "Full Stack Developer skilled in React.js, Vue.js, and Next.js, with backend experience in Node.js, Express.js, and NestJS. Proficient in MongoDB and PostgreSQL, focused on building scalable, high-performance, and maintainable web applications."
 
     const description = useRef(null)
     const isInview = useInView(description, { once: true, margin: "0px 0px -100px 0px" })
