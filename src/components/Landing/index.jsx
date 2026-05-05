@@ -53,8 +53,8 @@ export default function Home () {
             <Image src="/images/background1.png" fill={true}/>
             <div className={styles.sliderContainer}>
                 <div ref={slider} className={styles.slider}>
-                    <p ref={firstText}>Frontend Developer -</p>
-                    <p ref={secondText}>Frontend Developer -</p>
+                    <p ref={firstText}>FullStack Developer -</p>
+                    <p ref={secondText}>FullStack Developer -</p>
                 </div>
             </div>
             <div data-scroll data-scroll-speed={0.1} className={styles.description}>
